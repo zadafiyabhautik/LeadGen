@@ -1,0 +1,706 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap'); */
+
+
+/* montserrat-100 - latin */
+@font-face {
+     font-family: 'Montserrat';
+     font-style: normal;
+     font-weight: 100;
+     src: url('../fonts/montserrat-v25-latin-100.eot'); /* IE9 Compat Modes */
+     src: local(''),
+          url('../fonts/montserrat-v25-latin-100.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('../fonts/montserrat-v25-latin-100.woff2') format('woff2'), /* Super Modern Browsers */
+          url('../fonts/montserrat-v25-latin-100.woff') format('woff'), /* Modern Browsers */
+          url('../fonts/montserrat-v25-latin-100.ttf') format('truetype'), /* Safari, Android, iOS */
+          url('../fonts/montserrat-v25-latin-100.svg#Montserrat') format('svg'); /* Legacy iOS */
+   }
+   /* montserrat-regular - latin */
+   @font-face {
+     font-family: 'Montserrat';
+     font-style: normal;
+     font-weight: 400;
+     src: url('../fonts/montserrat-v25-latin-regular.eot'); /* IE9 Compat Modes */
+     src: local(''),
+          url('../fonts/montserrat-v25-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('../fonts/montserrat-v25-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+          url('../fonts/montserrat-v25-latin-regular.woff') format('woff'), /* Modern Browsers */
+          url('../fonts/montserrat-v25-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+          url('../fonts/montserrat-v25-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+   }
+   /* montserrat-700 - latin */
+   @font-face {
+     font-family: 'Montserrat';
+     font-style: normal;
+     font-weight: 700;
+     src: url('../fonts/montserrat-v25-latin-700.eot'); /* IE9 Compat Modes */
+     src: local(''),
+          url('../fonts/montserrat-v25-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('../fonts/montserrat-v25-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+          url('../fonts/montserrat-v25-latin-700.woff') format('woff'), /* Modern Browsers */
+          url('../fonts/montserrat-v25-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+          url('../fonts/montserrat-v25-latin-700.svg#Montserrat') format('svg'); /* Legacy iOS */
+   }
+
+   /* open-sans-300 - latin */
+@font-face {
+     font-family: 'Open Sans';
+     font-style: normal;
+     font-weight: 300;
+     src: url('../fonts/open-sans-v34-latin-300.eot'); /* IE9 Compat Modes */
+     src: local(''),
+          url('../fonts/open-sans-v34-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('../fonts/open-sans-v34-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+          url('../fonts/open-sans-v34-latin-300.woff') format('woff'), /* Modern Browsers */
+          url('../fonts/open-sans-v34-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+          url('../fonts/open-sans-v34-latin-300.svg#OpenSans') format('svg'); /* Legacy iOS */
+   }
+   /* open-sans-regular - latin */
+   @font-face {
+     font-family: 'Open Sans';
+     font-style: normal;
+     font-weight: 400;
+     src: url('../fonts/open-sans-v34-latin-regular.eot'); /* IE9 Compat Modes */
+     src: local(''),
+          url('../fonts/open-sans-v34-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('../fonts/open-sans-v34-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+          url('../fonts/open-sans-v34-latin-regular.woff') format('woff'), /* Modern Browsers */
+          url('../fonts/open-sans-v34-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+          url('../fonts/open-sans-v34-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+   }
+
+
+:root{
+     /* --bgTheme: rgb(230, 26, 26); */
+     --fontMontserrat: 'Montserrat','sans-serif';
+}
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+ul{
+     list-style: none;
+}
+a{
+     text-decoration: none;
+}
+body{
+ 
+     font-family: var(--fontMontserrat);
+     font-weight: 100;
+     line-height: 26px;
+     
+}
+img{
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+
+}
+.container{
+          width: 1140px;
+          margin: 0 auto;
+}
+.flex{
+     display: flex;
+     /* flex-wrap: wrap; */
+}
+.justify-center{    
+     justify-content: center;
+}
+.justify-between{
+     justify-content: space-between;
+}
+.align-center{
+     align-items: center;
+}
+.spacer{
+     padding-top: 70px;
+     padding-bottom: 70px;
+}
+.bgTheme{
+     background-color: var(--bgTheme);
+     color: white;
+}
+
+html{
+     scroll-behavior: smooth;
+}    
+          
+/*=============================================================================================
+                                             Saret Header
+=============================================================================================*/
+header{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     z-index: 9999;
+
+}
+.fixed{
+     position: fixed;
+     top:0; 
+     left:0;
+     width: 100%;
+     z-index: 9999;
+     background-color: #000; 
+}    
+.main_header{
+     padding: 10px 0;
+}
+.main_header .main_logo,
+.main_header .sidbar_button{
+     width: 20%;
+}
+.main_header .sidbar_button{
+     text-align: right;
+}
+.main_header .navigation{
+     width: 60%;
+     justify-content: right;
+}
+.main_menu{
+     justify-content: end;
+}
+.main_menu li a{
+     color: #ffff;
+     display: block;
+     padding: 15px;
+     font-size: 12px;
+     font-weight: 700;
+     font-family:var(--fontMontserrat);
+     
+}
+.main_menu li:hover > a{
+          color: rgba(255, 255, 255, .6);
+          
+}
+.sidbar_button button{
+     height: 30px;
+     width: 100px;
+     font-size: 10px;
+     
+}
+button i{
+     padding: 5px;
+     text-align: center;
+}
+.main_logo img{
+     /* max-height: 35px; */
+     width: 80%;
+     padding: 0 50px;
+     
+}
+.sidbar_icon{
+     padding: 0 50px;
+}
+/*=============================================================================================
+                                             End Header
+=============================================================================================*/
+
+
+
+/*=============================================================================================
+                                             Start main
+=============================================================================================*/
+/* banner */
+
+
+.main_banner>diV{
+     width: 50%;
+     padding: 20px;
+}
+
+.left_side .titel, .left_text{
+     font-size: 80px;
+     line-height: 75px;
+     margin-bottom: 30px;     
+     top: 50%;
+     color: rgb(255, 255, 255);
+}
+.left_text{
+     font-size: 16px;
+     line-height: 28px;
+     font-weight: 700;
+}
+.btn_theme{
+     padding: 10px 30px;
+     background-color: #fff;
+     border-radius: 50px;
+     letter-spacing: 1px;
+     text-transform: uppercase;
+     font-weight: bold;
+     font-size: 12px;
+     color: #282828;
+
+}
+.btn_theme_r{
+     padding: 10px 30px;
+     /* background-color: #fff; */
+     border-radius: 50px;
+     letter-spacing: 1px;
+     text-transform: uppercase;
+     font-weight: bold;
+     font-size: 12px;
+     color: #fff; 
+     border: 2px white solid;
+}
+.btn_theme_r:hover{
+          color: rgba(255, 255, 255, .6);
+          border-color: rgba(255, 255, 255, .6);
+          
+}
+.btn_theme:hover{
+     background-color: rgba(255, 255, 255, .6);
+}
+.btn_theme_r i{
+     padding: 10px;
+}
+.btn_theme i{
+     padding: 10px;
+}
+.btn .r_btn{
+     /* margin: 0px 20px 0px 0px; */
+     padding: 0px 25px;
+}
+.bg_sec_img{
+     background-image: url(../image/agency-slider-01.jpg);
+     padding: 150px 0;
+     background-size: cover;
+}
+/*End banner */
+ 
+/* start about */
+.main_about{
+     padding: 50px 0 100px   ;
+}
+.main_about>div{
+     width: 50%;
+     padding: 30px;
+}
+.about_par{
+     color: #000;
+     font-size: 35px;
+     font-family:var(--fontMontserrat);
+     font-weight: 400;
+     margin-bottom: 25px;
+     line-height: 40px;
+}
+ .text_par{
+     color: #707070;
+     font-size: 18px;
+     font-family: 'Open Sans';
+     font-weight: 400;
+
+}
+.pare{
+     color: #707070;
+     font-size: 14px;
+     font-family: 'Open Sans';
+     font-weight: 400;
+     margin-top: 25px;
+}
+.main_about .left_text{
+     margin-top: 100px;
+}
+.btn_continue{
+     border: 2px #43cbcd solid;
+     height: 38px;
+     width: 205px;
+     color: #43cbcd;
+     font-size: 12px;
+     font-weight: 600;
+     padding: 8px 25px;
+     border-radius: 50px;
+     text-align: center;
+
+}
+.about_btn{
+     margin : 30px 0;
+}
+.about_btn i{
+     padding: 0 5px;
+
+}
+.about_btn:hover .btn_continue,
+.about_btn:hover .i{
+     color: #a1e4e6;
+     border: #a1e4e6 2px solid;
+     transition: .3s;
+}
+/* End about */
+
+/* start about image */
+
+
+.about_img {
+     margin-top: -70px;
+}
+/* end about image */
+
+/* start Features*/
+.main_Features>div{
+     width: 50%;
+}
+.box_features{
+     height: 762px;
+     background-color: #46eff0;
+     padding: 117px;
+}
+.main_title .no{
+     color: #282828;
+     font-size: 35px;
+     font-family: var(--fontMontserrat);
+     font-weight: 600;
+     padding: 0 15px;
+}
+.main_title .title_1{
+     font-size: 24px;
+     color: #282828;
+     font-family: var(--fontMontserrat);
+     font-weight: 400;
+     margin: 0 0 5px;
+}
+.title_1 .per{
+     padding: 10px 0;
+     font-size: 16px;
+     margin: 0 0 22px;
+}
+.Features_righit{
+     height: 762px;
+}
+/* end Features*/
+
+/* start colors*/
+.colors_title .title{
+     font-size: 35px;
+     color: #282828;
+     font-weight: 400;
+     font-family: 'Montserrat';
+     text-align: center;
+     margin: 0 0 24px;
+     margin: 40px;
+}
+.colors_title .pare{
+     text-align: center;
+     margin: 0 232px 81px;
+     font-size: 14px;
+     font-family: 'Open Sans';
+     color: #707070;
+}
+.clors_img .c_1{
+     width: 25%;
+     padding: 0 20px;
+}
+
+
+/* end colors*/
+
+/* start design*/
+.main_design{
+     width: 55%;
+     /* position: absolute;
+     top: 0;
+     left: 0; */
+}
+.design_box{
+     height: 563px;
+     background-color: #A78A73;
+     padding: 92px;
+}
+.design_box .design_title{
+     color: #ffffff;
+     font-size: 45px;
+     font-family: "Montserrat";
+     font-weight: 400;
+     margin: 0px 0 20px ;
+     line-height: 50px;
+}
+.design_text{
+     color: #ffffff;
+     font-size: 24px;
+     font-family: "Open Sans";
+     font-weight: 400;
+     margin: 0 0 29px ;
+     line-height: 30px;
+
+}
+.design_per{
+     color: #ffffff;
+     font-size: 14px;
+     font-family: "Open Sans";
+     font-weight: 400;
+     margin: 0px 0 20px ;
+     
+}
+.design{
+     position: relative;
+}
+.design_image{
+     position: absolute;
+     top: 0;
+     left: 0;
+     margin-top: 70px;
+     height: 563px;
+     z-index: -3;
+     width: 100%;
+}
+
+/* End design*/
+
+/* start doom*/
+.doom_bac{
+     height: 600px;
+     position: relative;
+}
+.doom_text_image{
+     width: 580px;
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+}
+/* End doom*/
+
+/* start REVIEWS*/
+
+
+.reviews_img{
+     /* height: 100%; */
+     /* width: 100%; */
+     padding: 0 15px;
+}
+.reviews_img img{
+     border-radius: 50%;
+     height: 106px;
+     width: 106px;
+}
+.reviews_par{
+     font-size: 14px;
+     font-weight: 400;
+     columns: #707070;
+     font: left;
+     margin: 0 0 11px;
+     font-family: 'Montserrat';
+
+}
+.reviews_name{
+     font-size: 13px;
+     color: #282828;
+     font-family: 'Montserrat';
+     font-weight: 600;
+}
+.reviews_tex{
+     padding: 0 0px;
+}
+.reviews_1{
+     margin: 0 0 65px;
+     padding: 0 15px;
+     
+}
+/* End REVIEWS*/
+
+/*start email*/
+.bg_id_color{
+     background: #47DF84;
+     /* height: 100px; */
+}
+.email_title{
+     color: #fff;
+     font-size: 27px;
+     font-family: 'Montserrat';
+     font-weight: 400;
+     padding: 15px;
+     
+}
+.email_box{
+     height: 61px;
+     width: 291px;
+     background-color: #fff;
+     padding: 19px 25px;
+     border-radius: 5px;
+     border-top-right-radius: 0px;
+     border-bottom-right-radius: 0px;
+     margin-left: 225px;
+     
+}
+.email_box input{
+     border: none;
+     font-size: 14px;
+}
+.email_btn{
+     height: 61px;
+     width: 61px;
+     background: #ffffff;
+     border-radius: 5px;
+     border-top-left-radius: 0px;
+     border-bottom-left-radius: 0px;
+}
+.email_btn:hover{
+     background-color: #c2fcd9;
+     transition: .3s;
+     height: 62px;
+     width: 62px;
+
+}
+.email_btn i{
+     font-size: 30px;
+     padding: 15px;
+     color: #47DF84;
+}
+/*end email*/
+
+
+/*start product*/
+.main_product_1{
+     padding: 0 15px;
+     width: 25%;
+
+}
+.pro_title h3{
+     font-size: 14px;    
+}
+.product_img{
+     width: 100%;
+}
+.pro_heading{
+     font: 14px;
+     font-weight: 400;
+     display: block;
+     text-align: center;
+}
+.pro_title .pro_text{
+     text-align: center;
+     color: #848484;
+     font-weight: 400;
+     font-size: 14px;
+     margin: 0 0 5px;
+}
+.pro_prise{
+     text-align: center;
+     font-size: 16px;
+     color: #282828;
+     font-weight: 600;
+     margin: 0 0 14px;
+}
+.pro_title .about_btn{
+     text-align: center;
+     margin: 15px;
+}
+/*end product*/
+/*=============================================================================================
+                                             End main
+=============================================================================================*/
+
+
+/*=============================================================================================
+                                             Saret footer
+=============================================================================================*/
+
+/*start footer*/
+.bg_gray{
+     background-color: #f6f6f6;
+     padding: 60px;
+}
+.footer_logo{
+     padding: 0 15px;
+}
+.footer_logo img{
+     width: 163px;
+     height: 39px;
+}
+.main_footer_logo{
+     width: 25%;
+
+}
+.logo_text p{
+     font-size: 13px;
+     font-family: 'Open Sans';
+     color: #707070;
+     line-height: 20px;
+     margin: 0 0 22px;
+     width: 400;
+}
+.footer_icon {
+     font-size: 14px;
+     font-family: 'Open Sans';
+     letter-spacing: 6px;
+     margin: 17px 0 0;
+}
+.main_Company{
+     width: 16.66%;
+     padding: 0 15px;
+
+}
+.com_title h3{
+     font-size: 14px;
+     color: #282828;
+     font-weight: 600;
+     margin: 0 0 6px;
+     font-family: 'Open Sans';
+
+}
+.list li{
+     color: #848484;
+     font-family: 'Open Sans';
+     font-size: 13px;
+     margin: 2px 0;
+     font-weight: 400;
+}
+.main_Newsletter{
+     width: 25%;
+}
+.Newsletter_title{
+     padding: 0 15px;
+}
+.Newsletter_title h3{
+     font-size: 14px;
+     color: #282828;
+     font-weight: 600;
+     margin: 0 0 10px;
+     font-family: 'Open Sans';
+
+}
+.Newsletter_par p{
+     font-size: 13px;
+     font-family: 'Open Sans';
+     color: #707070;
+     line-height: 20px;
+     margin: 0 0 22px;
+     font-weight: 400    ;
+}
+/* .maile_box{
+     height: 36px;
+     width: 267px;
+     background-color: #fff;
+} */
+.maile_box input{
+     border: none;
+     padding: 8px 40px 9px 20px;
+     width: 267px;
+}
+.mail_icon i{
+     margin-left: -40px;
+     padding: 8px;
+     color: #928b8b;
+}
+.line{
+     border: 1px rgb(223, 215, 215) solid;
+     margin-top: 35px;
+     margin-bottom: 40px;
+}
+.line_text{
+     text-align: center;
+     font-size: 13px;
+     font-weight: 400;
+}
+/*end footer*/
+/*=============================================================================================
+                                             End footer
+=============================================================================================*/
+.owl-dots{
+     position: absolute;
+     top: 85%;
+     width: 100%;
+}
